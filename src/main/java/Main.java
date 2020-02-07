@@ -17,5 +17,19 @@ public class Main {
         for (String i : args) {
             numbers.add(Float.parseFloat(i));
         }
+
+        if (operator.equals("+")) {
+            System.out.print("Answer: ");
+            System.out.println(add(numbers));
+        }
+
+    }
+
+    private static Float add(ArrayList<Float> args) {
+        Float tot = Float.parseFloat("0");
+        for (Float i : args) {
+            tot += i;
+        }
+        return tot;
     }
 }
